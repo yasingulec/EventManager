@@ -1,5 +1,6 @@
 ﻿using EventManagingSystem.BLL;
 using EventManagingSystem.Entities;
+using EventManagingSystem.UI.Filters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,7 @@ namespace EventManagingSystem.UI.Controllers
         {
             return View();
         }
+        [LogFilter]
         [HttpPost]
         public ActionResult Signin(Person person)
         {

@@ -10,3 +10,14 @@ C:\Users\bilge.adam\Desktop\EventManagingSystem\EventManagingSystem.Entities\obj
 C:\Users\bilge.adam\Desktop\EventManagingSystem\EventManagingSystem.Entities\obj\Debug\EventManagingSystem.Entities.csproj.CopyComplete
 C:\Users\bilge.adam\Desktop\EventManagingSystem\EventManagingSystem.Entities\obj\Debug\EventManagingSystem.Entities.dll
 C:\Users\bilge.adam\Desktop\EventManagingSystem\EventManagingSystem.Entities\obj\Debug\EventManagingSystem.Entities.pdb
+C:\Users\loses\Desktop\Work\EventManagingSystem\EventManagingSystem.Entities\bin\Debug\EventManagingSystem.Entities.dll.config
+C:\Users\loses\Desktop\Work\EventManagingSystem\EventManagingSystem.Entities\bin\Debug\EventManagingSystem.Entities.dll
+C:\Users\loses\Desktop\Work\EventManagingSystem\EventManagingSystem.Entities\bin\Debug\EventManagingSystem.Entities.pdb
+C:\Users\loses\Desktop\Work\EventManagingSystem\EventManagingSystem.Entities\bin\Debug\EntityFramework.dll
+C:\Users\loses\Desktop\Work\EventManagingSystem\EventManagingSystem.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\loses\Desktop\Work\EventManagingSystem\EventManagingSystem.Entities\bin\Debug\EntityFramework.xml
+C:\Users\loses\Desktop\Work\EventManagingSystem\EventManagingSystem.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\loses\Desktop\Work\EventManagingSystem\EventManagingSystem.Entities\obj\Debug\EventManagingSystem.Entities.csproj.CoreCompileInputs.cache
+C:\Users\loses\Desktop\Work\EventManagingSystem\EventManagingSystem.Entities\obj\Debug\EventManagingSystem.Entities.csproj.CopyComplete
+C:\Users\loses\Desktop\Work\EventManagingSystem\EventManagingSystem.Entities\obj\Debug\EventManagingSystem.Entities.dll
+C:\Users\loses\Desktop\Work\EventManagingSystem\EventManagingSystem.Entities\obj\Debug\EventManagingSystem.Entities.pdb

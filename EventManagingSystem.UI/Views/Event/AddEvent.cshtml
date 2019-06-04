@@ -1,0 +1,53 @@
+﻿@model EventManagingSystem.Entities.Event
+@using EventManagingSystem.Entities
+@using EventManagingSystem.BLL
+@{
+    /**/
+
+    ViewBag.Title = "AddEvent";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+    CategoriesBLL categoriesBLL = new CategoriesBLL();
+    List<Category> categories = categoriesBLL.GetCategories();
+
+}
+@Html.Partial("/Views/Partial/Information.cshtml")
+<div class="container">
+    @using (Html.BeginForm("AddEvent", "Event", FormMethod.Post))
+    {
+        <div class="contact_form">
+            <div class="form-group">
+                @Html.DropDownListFor(x => x.CategoryID, new SelectList(categories, "CategoryID", "CategoryName"), new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.TextBoxFor(x => x.EventName, new { @class = "form-control", placeholder = "Event Name", type = "text" })
+            </div>
+            <div class="form-group">
+                @Html.TextBoxFor(x => x.ApplicationDate, new { @class = "datepicker form-control", placeholder = "Application Date", type = "text" })             
+            </div>
+            <div class="form-group">
+                @Html.TextBoxFor(x => x.NumberOfPersons, new { @class = "form-control", placeholder = "Total Person", type = "text" })
+            </div>
+            <div class="form-group">
+                @Html.TextBoxFor(x => x.EventImage, new { @class = "form-control", placeholder = "Event Image URL", type = "text" })
+            </div>
+            <div class="form-group">
+                @Html.TextBoxFor(x => x.Description, new { @class = "form-control", placeholder = "Description", type = "text" })
+            </div>
+            <div class="form-group">
+                @Html.TextBoxFor(x => x.Country, new { @class = "form-control", placeholder = "Country", type = "text" })
+            </div>
+            <div class="form-group">
+                @Html.TextBoxFor(x => x.City, new { @class = "form-control", placeholder = "City", type = "text" })
+            </div>
+            <div class="form-group">
+                @Html.TextBoxFor(x => x.Location, new { @class = "form-control", placeholder = "Location", type = "text" })
+            </div>
+
+
+            <div class="form-group text-right">
+            
+                <button class="btn btn-rounded btn-primary" type="submit">Create a Event</button>
+            </div>
+        </div>
+    }
+</div>
