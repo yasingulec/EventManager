@@ -1,0 +1,55 @@
+﻿@using EventManagingSystem.Entities;
+@using EventManagingSystem.BLL
+@{
+    EventManager eventManager = new EventManager();
+    List<Event> Events = eventManager.GetEvents();
+}
+<section class="pb100">
+    <div class="container">
+        <div class="table-responsive">
+            <table class="event_calender table">
+                <thead class="event_title">
+                    <tr>
+                        <th>
+                            <i class="ion-ios-calendar-outline"></i>
+                            <span>next events calendar</span>
+                        </th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var item in Events)
+                    {
+                        <tr>
+                            <td>
+                                <img src="@item.EventImage" alt="event">
+                            </td>
+                            <td class="event_date">
+                                @item.EventName
+                                <span>@item.Country @item.City</span>
+                            </td>
+                            <td>
+                                <div class="event_place">
+                                    <h5>@item.Location</h5>
+                                    <h6>@item.ApplicationDate</h6>
+                                    <p>who created: @item.Person.UserName</p>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary btn-rounded">Read More</a>
+                            </td>
+                            <td class="buy_link">
+                                <a href="#">Join</a>
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

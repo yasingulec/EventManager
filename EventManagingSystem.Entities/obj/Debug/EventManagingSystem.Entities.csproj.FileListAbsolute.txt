@@ -1,0 +1,12 @@
+C:\Users\bilge.adam\Desktop\EventManagingSystem\EventManagingSystem.Entities\bin\Debug\EventManagingSystem.Entities.dll.config
+C:\Users\bilge.adam\Desktop\EventManagingSystem\EventManagingSystem.Entities\bin\Debug\EventManagingSystem.Entities.dll
+C:\Users\bilge.adam\Desktop\EventManagingSystem\EventManagingSystem.Entities\bin\Debug\EventManagingSystem.Entities.pdb
+C:\Users\bilge.adam\Desktop\EventManagingSystem\EventManagingSystem.Entities\bin\Debug\EntityFramework.dll
+C:\Users\bilge.adam\Desktop\EventManagingSystem\EventManagingSystem.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\bilge.adam\Desktop\EventManagingSystem\EventManagingSystem.Entities\bin\Debug\EntityFramework.xml
+C:\Users\bilge.adam\Desktop\EventManagingSystem\EventManagingSystem.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\bilge.adam\Desktop\EventManagingSystem\EventManagingSystem.Entities\obj\Debug\EventManagingSystem.Entities.csprojAssemblyReference.cache
+C:\Users\bilge.adam\Desktop\EventManagingSystem\EventManagingSystem.Entities\obj\Debug\EventManagingSystem.Entities.csproj.CoreCompileInputs.cache
+C:\Users\bilge.adam\Desktop\EventManagingSystem\EventManagingSystem.Entities\obj\Debug\EventManagingSystem.Entities.csproj.CopyComplete
+C:\Users\bilge.adam\Desktop\EventManagingSystem\EventManagingSystem.Entities\obj\Debug\EventManagingSystem.Entities.dll
+C:\Users\bilge.adam\Desktop\EventManagingSystem\EventManagingSystem.Entities\obj\Debug\EventManagingSystem.Entities.pdb
