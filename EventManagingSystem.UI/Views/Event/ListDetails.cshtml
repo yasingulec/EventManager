@@ -1,0 +1,182 @@
+﻿@model EventManagingSystem.Entities.Event
+@using EventManagingSystem.BLL
+@using EventManagingSystem.Entities
+
+@{
+    ViewBag.Title = "ListDetails";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+    CategoriesBLL categoriesManager = new CategoriesBLL();
+    List<Category> categories = categoriesManager.GetCategories();
+
+}
+
+<section class="inner_cover parallax-window" data-parallax="scroll" data-image-src="assets/img/bg/bg-img.png">
+    <div class="overlay_dark"></div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-12">
+                <div class="inner_cover_content">
+                    <h3>
+                        News
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="breadcrumbs">
+            <ul>
+                <li><a href="#">Home</a>   |  </li>
+                <li><span>News</span></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<section class="pt100 pb100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <!--blog section start -->
+            <div class="col-12 col-md-8">
+                <div class="blog_card">
+                    <img src="@Model.EventImage" alt="blog News ">
+                    <div class="blog_box_data">
+                        <span class="blog_date">
+                            @Model.ApplicationDate
+                        </span>
+                        <div class="blog_meta">
+                            <span><a href="#">@Model.Person.UserName</a></span>  | <span><a href="#">  @Model.Category.CategoryName   </a></span>|  <span><a href="#">3 comments</a></span>
+                        </div>
+                        <h5>
+                            @Model.EventName
+                        </h5>
+                        <p class="blog_word">
+                            @Model.Description
+                        </p>
+                        <a href="#" class="readmore_btn">Read More</a>
+                    </div>
+                </div>
+
+                <!--pagenition menu-->
+                <div class="mt70 mb70">
+                    <ul class="nav_menu">
+                        <li class="active"><span>01</span></li>
+                        <li><a href="#">02</a></li>
+                        <li><a href="#">03</a></li>
+                    </ul>
+                </div>
+                <!--pageintion -->
+
+            </div>
+            <!--blog section end-->
+            <!--sidebar section -->
+            <div class="col-12 col-md-4">
+                <div class="sidebar">
+                    <div class="widget widget_search">
+                        <div class="search-form">
+                            <input type="text" class="search-field" placeholder="Search">
+                        </div>
+                    </div>
+                    <div class="widget widget_categories">
+                        <h4 class="widget-title">
+                            Archives
+                        </h4>
+                        <ul>
+                            <li><a href="#">March 2017</a></li>
+                            <li><a href="#">April 2017</a></li>
+                            <li><a href="#">May 2017</a></li>
+                            <li><a href="#">June 2017</a></li>
+                        </ul>
+                    </div>
+                    <div class="widget widget_categories">
+                        <h4 class="widget-title">
+                            Categories
+                        </h4>
+                        <ul>
+                            @foreach (var item in categories)
+                            {
+                                <li><a href="#">@item.CategoryName</a></li>
+
+                            }
+
+                        </ul>
+                    </div>
+
+                    <div class="widget widget_latest_post">
+                        <h4 class="widget-title">
+                            Latest Posts
+                        </h4>
+                        <ul>
+                            <li>
+                                <div class="widget_recent_posts">
+                                    <img src="assets/img/blog/blog1.png" alt="news">
+                                    <div class="content">
+                                        <a href="#">Uncategorized</a>
+                                        <p>by Jane Smith / Aug 25, 2017</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="widget_recent_posts">
+                                    <img src="assets/img/blog/blog2.png" alt="news">
+                                    <div class="content">
+                                        <a href="#">Uncategorized</a>
+                                        <p>by Jane Smith / Aug 25, 2017</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="widget_recent_posts">
+                                    <img src="assets/img/blog/blog3.png" alt="news">
+                                    <div class="content">
+                                        <a href="#">Uncategorized</a>
+                                        <p>by Jane Smith / Aug 25, 2017</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="widget_recent_posts">
+                                    <img src="assets/img/blog/blog1.png" alt="news">
+                                    <div class="content">
+                                        <a href="#">Uncategorized</a>
+                                        <p>by Jane Smith / Aug 25, 2017</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="widget widget_instagram">
+                        <h4 class="widget-title">
+                            Instagram
+                        </h4>
+                        <ul>
+                            <li><a href="#"><img src="assets/img/blog/instagram/inst5.png" alt="instagram"></a></li>
+                            <li><a href="#"><img src="assets/img/blog/instagram/inst2.png" alt="instagram"></a></li>
+                            <li><a href="#"><img src="assets/img/blog/instagram/inst3.png" alt="instagram"></a></li>
+                            <li><a href="#"><img src="assets/img/blog/instagram/inst4.png" alt="instagram"></a></li>
+                            <li><a href="#"><img src="assets/img/blog/instagram/inst5.png" alt="instagram"></a></li>
+                            <li><a href="#"><img src="assets/img/blog/instagram/inst6.png" alt="instagram"></a></li>
+                        </ul>
+                    </div>
+                    <div class="widget widget_tags">
+                        <h4 class="widget-title">
+                            Tags
+                        </h4>
+                        <ul>
+                            <li><a href="#">branding</a></li>
+                            <li><a href="#">identity</a></li>
+                            <li><a href="#">design</a></li>
+                            <li><a href="#">inspiration</a></li>
+                            <li><a href="#">web design</a></li>
+                            <li><a href="#">video</a></li>
+                            <li><a href="#">photography</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--sidebar section end -->
+
+        </div>
+    </div>
+</section>

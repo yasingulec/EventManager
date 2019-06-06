@@ -298,6 +298,7 @@
     <Content Include="Views\Partial\EventCalendar.cshtml" />
     <Content Include="Views\Event\AddEvent.cshtml" />
     <Content Include="Scripts\jquery-1.12.4.min.map" />
+    <Content Include="Views\Event\ListDetails.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

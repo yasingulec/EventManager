@@ -13,7 +13,7 @@ namespace EventManagingSystem.UI.Controllers
     {
         EventManager eventManager = new EventManager();
         // GET: Event
-        [MyAuthenticationFilter]
+        [MyAuthenticationFilter,LogFilter]
         [HttpGet]
         public ActionResult AddEvent()
         {
@@ -27,6 +27,17 @@ namespace EventManagingSystem.UI.Controllers
             events.CreatedDate = DateTime.Now;
             eventManager.AddEvent(events);
             return RedirectToAction("Index","Home");
+        }
+        public ActionResult DeleteEvent(int id)
+        {
+            eventManager.DeleteEvent(id);
+            return View();
+        }
+        [MyAuthenticationFilter,LogFilter]
+        public ActionResult ListDetails(int id)
+        {
+            Event eventt = eventManager.GetEvent(id);
+            return View(eventt);
         }
     }
 }

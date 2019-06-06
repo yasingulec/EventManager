@@ -10,7 +10,7 @@ namespace EventManagingSystem.UI.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        [MyAuthenticationFilter]
+        [MyAuthenticationFilter,LogFilter]
         public ActionResult Index()
         {
             return View();

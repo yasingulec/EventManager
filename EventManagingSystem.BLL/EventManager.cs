@@ -30,9 +30,19 @@ namespace EventManagingSystem.BLL
             int rndnumber = ids[Random];
             return dc.Event.FirstOrDefault(e => e.EventID == rndnumber);
         }
+        public Event GetEvent(int id)
+        {
+           return dc.Event.FirstOrDefault(x => x.EventID == id);           
+        }
         public void AddEvent(Event events)
         {
             dc.Event.Add(events);
+            dc.SaveChanges();
+        }
+        public void DeleteEvent(int id)
+        {
+            Event events = dc.Event.FirstOrDefault(e =>e.EventID==id);
+            dc.Event.Remove(events);
             dc.SaveChanges();
         }
     }

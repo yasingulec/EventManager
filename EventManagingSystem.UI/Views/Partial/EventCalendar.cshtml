@@ -24,28 +24,29 @@
 
                     @foreach (var item in Events)
                     {
-                        <tr>
-                            <td>
-                                <img src="@item.EventImage" alt="event">
-                            </td>
-                            <td class="event_date">
-                                @item.EventName
-                                <span>@item.Country @item.City</span>
-                            </td>
-                            <td>
-                                <div class="event_place">
-                                    <h5>@item.Location</h5>
-                                    <h6>@item.ApplicationDate</h6>
-                                    <p>who created: @item.Person.UserName</p>
-                                </div>
-                            </td>
-                            <td>
-                                <a href="#" class="btn btn-primary btn-rounded">Read More</a>
-                            </td>
-                            <td class="buy_link">
-                                <a href="#">Join</a>
-                            </td>
-                        </tr>
+                    <tr>
+                        <td>
+                            <img src="@item.EventImage" alt="event">
+                        </td>
+                        <td class="event_date">
+                            @item.EventName
+                            <span>@item.Category.CategoryName</span>
+                        </td>
+                        <td>
+                            <div class="event_place">
+                                <h5>@item.Country-@item.City-@item.Location</h5>
+                                <h6>@item.ApplicationDate</h6>
+                                <p>who created: @item.Person.UserName</p>
+                            </div>
+                        </td>
+                        <td>
+                            <a href="/Event/ListDetails/@item.EventID" class="btn btn-primary btn-rounded">Read More</a>
+                        </td>
+                        <td class="buy_link">
+                            <a href="#">Join</a>
+                        </td>
+                      
+                    </tr>
                     }
 
                 </tbody>
