@@ -230,6 +230,7 @@
     <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Filters\LogFilter.cs" />
     <Compile Include="Filters\MyAuthenticationFilter.cs" />
@@ -304,6 +305,8 @@
     <Content Include="Views\Profile\MyProfile.cshtml" />
     <Content Include="Views\Category\CategoryEvents.cshtml" />
     <Content Include="Views\Event\ListEvents.cshtml" />
+    <Content Include="Views\Message\Inbox.cshtml" />
+    <Content Include="Views\Message\Outbox.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
