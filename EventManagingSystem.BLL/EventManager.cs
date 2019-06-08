@@ -15,7 +15,6 @@ namespace EventManagingSystem.BLL
         public List<Event> GetEvents()
         {
             return dc.Event.ToList();
-
         }
         public Event GetEvent()
         {
@@ -44,6 +43,10 @@ namespace EventManagingSystem.BLL
             Event events = dc.Event.FirstOrDefault(e =>e.EventID==id);
             dc.Event.Remove(events);
             dc.SaveChanges();
+        }
+        public List<Event> GetEvents(int id)
+        {
+            return dc.Event.Where(e => e.CategoryID == id).ToList();
         }
     }
 }

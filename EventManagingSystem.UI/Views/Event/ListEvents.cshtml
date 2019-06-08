@@ -1,0 +1,38 @@
+﻿@model List <EventManagingSystem.Entities.Event>
+
+@{
+    ViewBag.Title = "ListEvents";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+@Html.Partial("/Views/Partial/Information.cshtml")
+<div class="pt100 pb100">
+    <div class="container">
+        @Html.ActionLink("Add a New Event","AddEvent","Event", null,new {@class="btn btn-primary"})
+        @foreach (var item in Model)
+        {
+            <div class="event_box">
+                <img src="@item.EventImage" alt="event">
+                <div class="event_info">
+                    <div class="event_title">
+                        @item.EventName
+                    </div>
+                    <div class="speakers">
+                        <strong>Who Created:</strong>
+                        <span>@item.Person.FirstName</span>
+                    </div>
+                    <div class="event_date">
+                        @item.ApplicationDate
+                    </div>
+                </div>
+                <div class="event_word">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 col-12">
+                          @item.Description
+                        </div>                       
+                    </div>
+                </div>
+                <a href="#" class="readmore_btn">read more</a>
+            </div>
+        }
+    </div>
+</div>

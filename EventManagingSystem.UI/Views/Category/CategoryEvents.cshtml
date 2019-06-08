@@ -1,0 +1,49 @@
+﻿@model List<EventManagingSystem.Entities.Event>
+
+@{
+    ViewBag.Title = "CategoryEvents";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+<section class="pt100 pb100">
+    <div class="container">
+        <div class="row justify-content-center">
+            @foreach (var item in Model)
+            {
+
+                <div class="col-12 col-md-8">
+                    <div class="blog_card">
+                        <img src="@item.EventImage" alt="blog News ">
+                        <div class="blog_box_data">
+                            <span class="blog_date">
+                                @item.ApplicationDate
+                            </span>
+                            <div class="blog_meta">
+                                <span><a href="#">@item.Person.UserName</a></span>  | <span><a href="#">  @item.Category.CategoryName   </a></span>|  <span><a href="#">3 comments</a></span>
+                            </div>
+                            <h5>
+                                @item.EventName
+                            </h5>
+                            <p class="blog_word">
+                                @item.Description
+                            </p>
+                            <a href="#" class="readmore_btn">Read More</a>
+                        </div>
+                    </div>
+
+                    <!--pagenition menu-->
+                    <div class="mt70 mb70">
+                        <ul class="nav_menu">
+                            <li class="active"><span>01</span></li>
+                            <li><a href="#">02</a></li>
+                            <li><a href="#">03</a></li>
+                        </ul>
+                    </div>
+                    <!--pageintion -->
+
+                </div>
+            }
+
+
+        </div>
+    </div>
+</section>

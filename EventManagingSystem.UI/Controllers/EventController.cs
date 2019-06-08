@@ -39,5 +39,10 @@ namespace EventManagingSystem.UI.Controllers
             Event eventt = eventManager.GetEvent(id);
             return View(eventt);
         }
+        public ActionResult ListEvents()
+        {
+            List<Event> Events = eventManager.GetEvents();
+            return View(Events);
+        }
     }
 }

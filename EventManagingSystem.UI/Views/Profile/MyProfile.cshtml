@@ -6,26 +6,28 @@
     ViewBag.Title = "MyProfile";
     Layout = "~/Views/Shared/_LayoutPage.cshtml";
 }
+@Html.Partial("/Views/Partial/Information.cshtml")
+<div class="container">
+    @using (Html.BeginForm("MyProfile", "Profile", FormMethod.Post))
+    {
+        @Html.HiddenFor(x => x.PersonID)
+        <div class="form-group">
+            @Html.LabelFor(x => x.FirstName)
+            @Html.TextBoxFor(x => x.FirstName, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.DateOfBirth)
+            @Html.TextBoxFor(x => x.DateOfBirth, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.UserName)
+            @Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.Password)
+            @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+        </div>
 
-@using (Html.BeginForm("MyProfile", "Profile", FormMethod.Post))
-{
-    @Html.HiddenFor(x => x.PersonID)
-    <div class="form-group">
-        @Html.LabelFor(x => x.FirstName)
-        @Html.TextBoxFor(x => x.FirstName, new { @class = "form-control" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(x => x.DateOfBirth)
-        @Html.TextBoxFor(x => x.DateOfBirth, new { @class = "form-control" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(x => x.UserName)
-        @Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(x => x.Password)
-        @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
-    </div>
-    
-    <button type="submit" class="btn btn--green">Update</button>
-}
+        <button type="submit" class="btn btn--green">Update</button>
+    }
+</div>

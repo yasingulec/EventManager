@@ -226,6 +226,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -301,6 +302,8 @@
     <Content Include="Scripts\jquery-1.12.4.min.map" />
     <Content Include="Views\Event\ListDetails.cshtml" />
     <Content Include="Views\Profile\MyProfile.cshtml" />
+    <Content Include="Views\Category\CategoryEvents.cshtml" />
+    <Content Include="Views\Event\ListEvents.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

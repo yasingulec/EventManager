@@ -15,5 +15,6 @@ namespace EventManagingSystem.BLL
         {
             return dc.Category.ToList();
         }
+
     }
 }

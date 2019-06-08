@@ -56,17 +56,6 @@
                         <a href="#" class="readmore_btn">Read More</a>
                     </div>
                 </div>
-
-                <!--pagenition menu-->
-                <div class="mt70 mb70">
-                    <ul class="nav_menu">
-                        <li class="active"><span>01</span></li>
-                        <li><a href="#">02</a></li>
-                        <li><a href="#">03</a></li>
-                    </ul>
-                </div>
-                <!--pageintion -->
-
             </div>
             <!--blog section end-->
             <!--sidebar section -->
@@ -95,7 +84,7 @@
                         <ul>
                             @foreach (var item in categories)
                             {
-                                <li><a href="#">@item.CategoryName</a></li>
+                                <li><a href="/Category/CategoryEvents/@item.CategoryID">@item.CategoryName</a></li>
 
                             }
 
