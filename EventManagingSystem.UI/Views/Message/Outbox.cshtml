@@ -6,7 +6,7 @@
 }
 @Html.Partial("/Views/Partial/Information.cshtml")
 @Html.ActionLink("Inbox", "Inbox", "Message", new { @class = "btn btn-primary" })
-<button class="btn btn-primary">Send Message</button>
+@Html.ActionLink("Send Message", "PersonList", "Person",null, new { @class = "btn btn-primary " })
 <table class="table">
     <thead>
         <tr>

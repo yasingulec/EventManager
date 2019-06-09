@@ -1,0 +1,31 @@
+﻿@model List<EventManagingSystem.Entities.Person>
+
+@{
+    ViewBag.Title = "PersonList";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+@Html.Partial("/Views/Partial/Information.cshtml")
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">User Name</th>
+            <th scope="col">Birth Date</th>
+            <th scope="col">Send Message</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.PersonID</th>
+                <td>@item.UserName</td>
+                <td>@item.DateOfBirth</td>
+                <td>
+                    <a class="btn btn-success btn-xs" href="/Message/SendMessage/@item.PersonID"><i class="fa fa-envelope"></i></a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

@@ -25,8 +25,9 @@ namespace EventManagingSystem.UI.Controllers
             return View(messages);
         }
         [HttpGet]
-        public ActionResult SendMessage()
+        public ActionResult SendMessage(int id)
         {
+            Session["ID"] = id;
             return View();
         }
         [HttpPost]
@@ -34,8 +35,7 @@ namespace EventManagingSystem.UI.Controllers
         {
             Person person = (Person)Session["Login"];
             message.MessageFrom = person.PersonID;
-            //session kullanabiliriz
-            //kime gönderceğimizi seçmemiz gerek
+            message.MessageTo =(int) Session["ID"];
             message.MessageDate = DateTime.Now;
             messageManager.SendMessage(message);
             return View();

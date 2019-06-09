@@ -1,0 +1,22 @@
+﻿@model EventManagingSystem.Entities.Message
+
+@{
+    ViewBag.Title = "SendMessage";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+@Html.Partial("/Views/Partial/Information.cshtml")
+@using (Html.BeginForm("SendMessage", "Message", FormMethod.Post))
+{
+<div class="container">
+    <div class="contact_form">
+        <div class="form-group">
+            @Html.TextBoxFor(x => x.MessageTitle, new { @class = "form-control", placeholder = "Message Title", type = "text" })
+        </div>
+        <div class="form-group">
+            @Html.TextAreaFor(x => x.MessageBody, new { @class = "form-control", placeholder = "Message", type = "text", cols = "4", rows = "4" })
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+    </div>
+</div>
+}

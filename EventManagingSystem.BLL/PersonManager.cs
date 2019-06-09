@@ -33,5 +33,9 @@ namespace EventManagingSystem.BLL
             person.Password = _person.Password;
             dc.SaveChanges();
         }
+        public List<Person> GetPersons()
+        {
+            return dc.Person.ToList();
+        }
     }
 }
