@@ -13,6 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventManagingSystem.Entitie
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ToDo", "ToDo", "{D31D5B20-CF7E-4A84-843C-ECB1348ADC3F}"
 	ProjectSection(SolutionItems) = preProject
+		..\..\eventmanager.sql = ..\..\eventmanager.sql
 		..\..\features.txt = ..\..\features.txt
 	EndProjectSection
 EndProject
