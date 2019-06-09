@@ -307,6 +307,7 @@
     <Content Include="Views\Event\ListEvents.cshtml" />
     <Content Include="Views\Message\Inbox.cshtml" />
     <Content Include="Views\Message\Outbox.cshtml" />
+    <Content Include="Views\Message\MessageDetail.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

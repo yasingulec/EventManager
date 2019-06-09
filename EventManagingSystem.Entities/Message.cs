@@ -20,6 +20,7 @@ namespace EventManagingSystem.Entities
         [Required]
         [StringLength(300)]
         public string MessageBody { get; set; }
+        public string MessageTitle { get; set; }
 
         public virtual Person Person { get; set; }
 

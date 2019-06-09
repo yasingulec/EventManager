@@ -34,10 +34,21 @@ namespace EventManagingSystem.UI.Controllers
         {
             Person person = (Person)Session["Login"];
             message.MessageFrom = person.PersonID;
+            //session kullanabiliriz
             //kime gönderceğimizi seçmemiz gerek
             message.MessageDate = DateTime.Now;
             messageManager.SendMessage(message);
             return View();
+        }
+        public ActionResult MessageDetail(int id)
+        {         
+            Message message = messageManager.MessageDetail(id);
+            Message message2 = messageManager.ObMessageDetail(id);
+            if (message !=null)
+            {
+                return View(message);
+            }
+            return View(message2);
         }
     }
 }

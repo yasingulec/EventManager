@@ -4,37 +4,26 @@
     ViewBag.Title = "Outbox";
     Layout = "~/Views/Shared/_LayoutPage.cshtml";
 }
-
-<h2>Outbox</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+@Html.Partial("/Views/Partial/Information.cshtml")
+@Html.ActionLink("Inbox", "Inbox", "Message", new { @class = "btn btn-primary" })
+<button class="btn btn-primary">Send Message</button>
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageBody)
-        </th>
-        <th></th>
-    </tr>
+    <thead>
+        <tr>
+            <th scope="col">Message To</th>
+            <th scope="col">Title</th>
+            <th scope="col">Message Date</th>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.MessageDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MessageBody)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
-
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td scope="row">@item.Person1.UserName</td>
+                <th>@Html.ActionLink(@item.MessageTitle, "MessageDetail", "Message", new { @id = item.MessageTo }, null)</th>
+                <td>@item.MessageDate</td>
+            </tr>
+        }
+    </tbody>
 </table>

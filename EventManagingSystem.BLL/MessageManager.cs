@@ -25,5 +25,13 @@ namespace EventManagingSystem.BLL
             dc.Message.Add(message);
             dc.SaveChanges();
         }
+        public Message MessageDetail(int id)
+        {
+            return dc.Message.FirstOrDefault(m => m.MessageTo == id);
+        }
+        public Message ObMessageDetail(int id)
+        {
+            return dc.Message.FirstOrDefault(m => m.MessageFrom == id);
+        }
     }
 }
