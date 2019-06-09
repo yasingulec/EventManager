@@ -51,6 +51,7 @@
     <Compile Include="CategoriesBLL.cs" />
     <Compile Include="EventManager.cs" />
     <Compile Include="MessageManager.cs" />
+    <Compile Include="PersonEventManager.cs" />
     <Compile Include="PersonManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
